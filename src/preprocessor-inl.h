@@ -9,8 +9,6 @@
 #include <algorithm>
 
 #include "arguments.h"
-#include "date.h"
-#include "number.h"
 #include "punctuation.h"
 
 
@@ -86,24 +84,6 @@ void print_word(const freeling::word& wort)
 
   // If wort is punctuation, do not print it
   if (punctuation.is_punctuation(wort)) {
-    return;
-  }
-
-  // Obtain Number utility instance
-  const Number& number = Number::getNumber();
-
-  // If wort is a number, print its normalization
-  if (number.is_number(wort)) {
-    std::wcout << wort.get_lemma() << " ";
-    return;
-  }
-
-  // Obtain Date utility instance
-  const Date& date = Date::getDate();
-
-  // If wort is a date, print its normalization
-  if (date.is_date(wort)) {
-    std::wcout << wort.get_lemma() << " ";
     return;
   }
 
