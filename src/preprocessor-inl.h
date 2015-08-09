@@ -9,6 +9,7 @@
 #include <algorithm>
 
 #include "arguments.h"
+#include "date.h"
 #include "number.h"
 #include "punctuation.h"
 
@@ -19,7 +20,8 @@ void print_word(const freeling::word& wort);
 void print_sentence(const freeling::sentence& satz);
 
 Preprocessor::Preprocessor(const Arguments& arguments)
-: m_punts(arguments.get_freeling_share() + L"/common/punct.dat")
+: m_dates(arguments.get_language_code()) 
+, m_punts(arguments.get_freeling_share() + L"/common/punct.dat")
 , m_numbers(arguments.get_language_code(), L".", L",") // TODO: Language is messy http://bit.ly/1DsCpJV
 , m_splitter(arguments.get_freeling_share() + L"/" + arguments.get_language_code() + L"/splitter.dat")
 , m_tokenizer(arguments.get_freeling_share() + L"/" + arguments.get_language_code() + L"/tokenizer.dat")
@@ -43,6 +45,7 @@ void Preprocessor::preprocess()
     m_splitter.split(session_id, words, false, sentences);
     m_numbers.analyze(sentences);
     m_punts.analyze(sentences);
+    m_dates.analyze(sentences);
     
     // Print current sentences
     std::for_each(sentences.begin(), sentences.end(), print_sentence);
@@ -91,6 +94,15 @@ void print_word(const freeling::word& wort)
 
   // If wort is a number, print its normalization
   if (number.is_number(wort)) {
+    std::wcout << wort.get_lemma() << " ";
+    return;
+  }
+
+  // Obtain Date utility instance
+  const Date& date = Date::getDate();
+
+  // If wort is a date, print its normalization
+  if (date.is_date(wort)) {
     std::wcout << wort.get_lemma() << " ";
     return;
   }

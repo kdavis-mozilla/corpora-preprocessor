@@ -44,6 +44,9 @@ class Preprocessor
     void preprocess();
 
   private:
+    /** dates detection module */ 
+    freeling::dates m_dates;
+
     /** Punctuation detection module */
     freeling::punts m_punts;
 
