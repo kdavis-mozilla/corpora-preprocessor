@@ -7,7 +7,7 @@ A scripts suite that preprocesses the raw Wikipedia text corpora from [corpora-g
 
 - [make](https://www.gnu.org/software/make/)
 - [g++](https://gcc.gnu.org/) with C++11 support
-- Latest development version of [freeling](http://nlp.lsi.upc.edu/freeling/)
+- Revision 2791 of [freeling](http://nlp.lsi.upc.edu/freeling/)
 - AWS command line interface [cli](https://aws.amazon.com/cli/)
 - [bash](http://www.gnu.org/software/bash/) along with the standard command line utility `mkdir`
 
