@@ -14,7 +14,6 @@ mkdir -p language-models/pre-processed/es-es
 mkdir -p language-models/pre-processed/es-mx
 mkdir -p language-models/pre-processed/fr
 mkdir -p language-models/pre-processed/gl
-mkdir -p language-models/pre-processed/hr
 mkdir -p language-models/pre-processed/it
 mkdir -p language-models/pre-processed/pt-br
 mkdir -p language-models/pre-processed/pt-pt
