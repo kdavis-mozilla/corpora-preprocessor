@@ -16,7 +16,6 @@ bin/preprocessor fr < language-models/raw/fr/wiki.txt > language-models/pre-proc
 bin/preprocessor gl < language-models/raw/gl/wiki.txt > language-models/pre-processed/gl/wiki.txt &
 bin/preprocessor hr < language-models/raw/hr/wiki.txt > language-models/pre-processed/hr/wiki.txt &
 bin/preprocessor it < language-models/raw/it/wiki.txt > language-models/pre-processed/it/wiki.txt &
-bin/preprocessor nb < language-models/raw/nb-no/wiki.txt > language-models/pre-processed/nb-no/wiki.txt &
 bin/preprocessor pt < language-models/raw/pt-br/wiki.txt > language-models/pre-processed/pt-br/wiki.txt &
 bin/preprocessor pt < language-models/raw/pt-pt/wiki.txt > language-models/pre-processed/pt-pt/wiki.txt &
 bin/preprocessor ru < language-models/raw/ru/wiki.txt > language-models/pre-processed/ru/wiki.txt &
