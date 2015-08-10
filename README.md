@@ -1,5 +1,5 @@
 # Corpora Preprocessor
-A scripts suite that preprocesses the Wikipedia text corpora from [corpora-generator](https://github.com/kdavis-mozilla/corpora-generator)
+A scripts suite that preprocesses the raw Wikipedia text corpora from [corpora-generator](https://github.com/kdavis-mozilla/corpora-generator)
 
 # Quick Start
 
@@ -28,7 +28,7 @@ This will run through several steps. It will
 
 * Build an executable `preprocess` in the `bin` directory
 * Create a directory `language-models`
-* Download the Wikipedia data dumps from S3 created by [corpora-generator](https://github.com/kdavis-mozilla/corpora-generator) into `language-models`
+* Download the raw Wikipedia text corpora from S3 created by [corpora-generator](https://github.com/kdavis-mozilla/corpora-generator) into `language-models`
 * Create a series of directories,
 ```bash
 language-models/
@@ -42,11 +42,11 @@ language-models/
     ...
 ```
 one for each language to be preprocessed `as`, `ca`, `cs`...
-* With `preprocess` proprocess the associated data dumps and place them into the appropriate directory.
+* With `preprocess` proprocess the raw Wikipedia text corpora and place them into the appropriate directories.
 
 ### What the results are...
 
-The final result is the preprocessed text of each language's Wikipedia dump 
+The final result is a preprocessed text corpus for each language's raw Wikipedia text corpus 
 * `pre-processed/as/wiki.txt`
 * `pre-processed/ca/wiki.txt`
 * `pre-processed/cs/wiki.txt`
