@@ -15,7 +15,7 @@ A scripts suite that preprocesses the Wikipedia text corpora from [corpora-gener
 
 ### What to do...
 
-One simply opens a shell an proceedes as follows:
+One simply opens a shell an proceeds as follows:
 ```bash
 MacBook-Pro:Code kdavis$ cd corpora-preprocessor
 MacBook-Pro:corpora-preprocessor kdavis$ make all
@@ -27,7 +27,7 @@ MacBook-Pro:corpora-preprocessor kdavis$ make preprocessed-text
 This will run through several steps. It will
 
 * Build en executable `preprocess` in the `bin` directory
-* Create a diretory `language-models`
+* Create a directory `language-models`
 * Download the Wikipedia data dumps from S3 created by [corpora-generator](https://github.com/kdavis-mozilla/corpora-generator) into `language-models`
 * Create a series of directories,
 ```bash
@@ -40,7 +40,7 @@ language-models/
     ├── de
     ├── en
     ...
-```
+```appropriate directory
 one for each language to be preprocessed `as`, `ca`, `cs`...
 * With `preprocess` proprocess the associated data dumps and place them into the appropriate directory.
 
