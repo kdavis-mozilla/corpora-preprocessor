@@ -1,4 +1,4 @@
-#!/bin/bash &
+#!/bin/bash
 bin/preprocessor as < language-models/raw/as/wiki.txt > language-models/pre-processed/as/wiki.txt &
 bin/preprocessor ca < language-models/raw/ca/wiki.txt > language-models/pre-processed/ca/wiki.txt &
 bin/preprocessor cs < language-models/raw/cs/wiki.txt > language-models/pre-processed/cs/wiki.txt &
