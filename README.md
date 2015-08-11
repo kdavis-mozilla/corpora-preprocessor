@@ -47,9 +47,9 @@ one for each language to be preprocessed `as`, `ca`, `cs`...
 ### What the results are...
 
 The final result is a preprocessed text corpus for each language's raw Wikipedia text corpus 
-* `pre-processed/as/wiki.txt`
-* `pre-processed/ca/wiki.txt`
-* `pre-processed/cs/wiki.txt`
+* `language-models/pre-processed/as/wiki.txt`
+* `language-models/pre-processed/ca/wiki.txt`
+* `language-models/pre-processed/cs/wiki.txt`
 * ...
 
 stored in the appropriate directory.
